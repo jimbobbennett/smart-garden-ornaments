@@ -1,0 +1,4 @@
+python-dotenv
+pyserial
+requests
+azure-iot-device
