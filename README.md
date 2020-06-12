@@ -4,7 +4,7 @@
 
 <!-- TODO - add photo -->
 
-This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids and tools that make programming accessible to young developers. You will use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn).
+This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn).
 
 ## How it works
 
@@ -18,21 +18,21 @@ This project is not limited to one household - if you have neighbors they can al
 
 ### The Hub
 
-For the 'hub' that allows your micro:bits to connect to the cloud, you will need the following:
+For the 'hub' that allows your micro:bits to connect to the cloud, you'll need the following:
 
 * A Raspberry Pi running Raspbian or Raspbian Lite. Any Pi will do that has internet connectivity, even the Pi Zero W (but not the base Pi Zero without WiFi).
 * An SD card for the Pi, at least 8GB in size
 * A BBC micro:bit
-* An appropriate USB cable to connect the micro:bit to the Pi. For example if you are using a Pi 3 or 4 you will need a USB to micro USB cable, if you are using a Pi Zero you will need a micro USB to micro USB cable or an adapter.
+* An appropriate USB cable to connect the micro:bit to the Pi. For example if you are using a Pi 3 or 4 you'll need a USB to micro USB cable, if you are using a Pi Zero you'll need a micro USB to micro USB cable or an adapter.
 * A USB power supply for the Pi. For the Pi 4 this needs to be USB-C, for other Pis this needs to be micro USB.
-* An Azure subscription. Instructions will be provided on how to set this up, and you will either need to be a student over the age of 18 in higher education to sign up for a student account, or have access to a credit card to sign up for a free account.
+* An Azure subscription. Instructions will be provided on how to set this up, and you'll either need to be a student over the age of 18 in higher education to sign up for a student account, or have access to a credit card to sign up for a free account.
   > If you sign up for a free account, your credit card will **NOT** be charged, it is just needed for verification.
 
 <!-- TODO - add photo -->
 
 ### Smart garden ornaments
 
-For each smart garden ornament you will need the following:
+For each smart garden ornament you'll need the following:
 
 * A BBC micro:bit
 * A battery pack for the micro:bit
@@ -40,7 +40,7 @@ For each smart garden ornament you will need the following:
 
 <!-- TODO - add photo -->
 
-The micro:bits have a temperature sensor built in, so if you are just tracking temperature this is all you will need. If you want to track other things then you will need different sensors. Some need to be purchased as a sensor (such as a microphone to track noise levels or a proximity sensor), others such as a soil moisture sensor can be made yourself. This project will cover the following sensors:
+The micro:bits have a temperature sensor built in, so if you are just tracking temperature this is all you'll need. If you want to track other things then you'll need different sensors. Some need to be purchased as a sensor (such as a microphone to track noise levels or a proximity sensor), others such as a soil moisture sensor can be made yourself. This project will cover the following sensors:
 
 <!-- TODO - add sensors -->
 * Home made soil moisture sensor
@@ -54,7 +54,7 @@ This guide is broken down into a number of days. For each day the project should
 Follow the links below to access the steps for each day:
 
 * [Day 1 - setup the cloud services](./days/1-setup.md)
-* Day 2 - connect to the cloud
+* [Day 2 - connect to the cloud](./days/2-connect.md)
 * Day 3 - build a mesh network to track temperatures
 * Day 4 - build your first smart garden ornament
 * Day 5 - add additional sensors
