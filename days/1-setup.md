@@ -370,6 +370,14 @@ You have a device configured, and a single view to see data for that device. The
 
 1. Select **Add tile**
 
+#### Save the dashboard
+
+1. Select **Save**
+
+    ![The save button](../images/iot-central-dashboard-save-button.png)
+
+Once the dashboard is saved you will see it with the two tiles. The temperature tile will  show **Waiting for data** as no data has been sent yet. The location tile will show the location you set on the first device on a map.
+
 ## Summary
 
 You've completed todays project - setting up Azure IoT Central. [Tomorrow](./2-connect.md) you will connect your Raspberry Pi to IoT Central and set up the micro:bit hub ready to gather data from your smart garden ornaments.
