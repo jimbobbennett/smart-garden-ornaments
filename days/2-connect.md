@@ -512,3 +512,5 @@ Once the Pi reboots, you can verify that the code is running by doing the follow
     The first line is the call from the Cron job, the second is the actual app.py file running under Python. Although there are two lines, the app is only running once.
 
 ## Summary
+
+You've completed todays project - connecting the Pi Hub to Iot Central. [Tomorrow](./3-build-mesh.md) you'll program more micro:bits to create a mesh network to send temperature data to the cloud.
