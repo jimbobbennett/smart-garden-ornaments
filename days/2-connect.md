@@ -383,6 +383,10 @@ The radio can be set to listen for different group numbers - this is a way to al
 
 ### Write the code to forward radio messages to the serial port
 
+> If you would rather code this in JavaScript or Python, you can find the code in the [code/iot-hub/microbit-hub](../code/iot-hub/microbit-hub) folder. The [`microbit-hub.js`](../code/iot-hub/microbit-hub/microbit-hub.js) file has the JavaScript code, and this can be pasted directly into the JavaScript editor. The [`microbit-hub.py`](../code/iot-hub/microbit-hub/microbit-hub.py) file has the Python code, and this can be pasted directly into the Python editor.
+>
+> You can also paste the code in and change to blocks to see how the code would look as blocks.
+
 1. Unplug your micro:bit from your Raspberry Pi and connect it to your PC or Mac
 
 1. From your browser, make sure the MakeCode editor is still open. If not, head to [makecode.microbit.org](https://makecode.microbit.org/) and open the `micro:bit hub` project.
@@ -513,4 +517,4 @@ Once the Pi reboots, you can verify that the code is running by doing the follow
 
 ## Summary
 
-You've completed todays project - connecting the Pi Hub to Iot Central. [Tomorrow](./3-build-mesh.md) you'll program more micro:bits to create a mesh network to send temperature data to the cloud.
+You've completed todays project - connecting the Pi Hub to Iot Central. [Tomorrow](./3-build-mesh.md) you'll program more micro:bits to create a mesh network of sensors to send temperature data to the cloud.

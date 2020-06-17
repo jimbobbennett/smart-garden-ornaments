@@ -1,3 +1,18 @@
+# Build a micro:bit sensor mesh network
+
+> ![The micro:bit logo](../images/micro-bit-logo.png)
+>
+> **This day requires someone confident using block based programming on a BBC micro:bit**
+
+## Code the temperature sensor
+
+## Mesh networks
+
+## Code the micro:bit mesh network
+
+
+
+
 1. Select **... more** under the **Radio** toolbox item
 
     ![the more section](../images/makecode-radio-more-toolbox.png)

@@ -97,7 +97,7 @@ Follow the links below to access the steps for each day:
 
 * [Day 1 - setup the cloud services](./days/1-setup.md)
 * [Day 2 - connect to the cloud](./days/2-connect.md)
-* [Day 3 - build a mesh network to track temperatures](./steps/3-build-mesh.md)
+* [Day 3 - build a sensor mesh network to track temperatures](./steps/3-build-mesh.md)
 * Day 4 - build your first smart garden ornament
 * Day 5 - add additional sensors
 * [Additional ideas](./additional-ideas/)
