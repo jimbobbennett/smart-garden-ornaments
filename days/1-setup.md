@@ -1,20 +1,23 @@
 # Day 1 - Setup the cloud services
 
-Todays project is to set up the cloud service. This service will take data from the micro:bits via the Raspberry Pi Hub and show it on a dashboard - for example showing temperatures from different smart ornaments on a graph and showing their locations on a map.
+> ![IoT Central logo](../images/iot-central-logo.png)
+>
+> **This entire day should be done by someone who has or can set up an Azure account**
 
-> This setup should be done by someone with experience setting up cloud services and who can access or sign up for an Azure subscription.
+Todays project is to set up the cloud service. This service will take data from the micro:bits via the Raspberry Pi Hub and show it on a dashboard - for example showing temperatures from different smart ornaments on a graph and showing their locations on a map.
 
 The cloud service that will be used is [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn), an IoT software-as-a-service platform. IoT Central allows you to configure apps - separate projects that can have one or more devices sending in data, as well as dashboard that you can use to see that data. In this case, the IoT Central app will be a project for your smart garden ornaments, connecting to your micro:bits to gather sensor data and plotting this data on a dashboard.
 
 <!-- TODO - add dashboard screenshot -->
 
-The steps you will take to set this up are:
+The steps you'll take to set this up are:
 
 1. Set up and Azure subscription
 1. Create an Azure IoT Central app
 1. Define a device template in the IoT Central app
 1. Add a first device in IoT Central
 1. Create a dashboard to visualize the device data
+1. Get some configuration values for IoT Central
 
 ## Create an Azure subscription
 
@@ -148,7 +151,7 @@ The device will need one *telemetry* value to start with, one *cloud property*, 
 
 1. Enter the required values for sending temperature as telemetry:
 
-    1. Enter `Temperature` as the *Display name*. This will set the *Name* to `Temeprature`, and you can leave this as is.
+    1. Enter `Temperature` as the *Display name*. This will set the *Name* to `Temperature`, and you can leave this as is.
 
     1. Leave the *Capability Type* as `Telemetry`
 
@@ -264,7 +267,7 @@ Now that you have a device template, you can use it to create a device in IoT Ce
 
 #### Create the device using the device template
 
-You will start by creating a single device to get started, and in later days you can add more devices.
+You'll start by creating a single device to get started, and in later days you can add more devices.
 
 1. From the side bar menu, select **Devices**
 
@@ -278,9 +281,9 @@ You will start by creating a single device to get started, and in later days you
 
     1. Ensure the *Template type* is set to `Smart garden ornament`
 
-    1. Name the device something that makes sense to you. I like to name devices after where they will be positioned, such as `Bird box outside Jim's window`
+    1. Name the device something that makes sense to you. For example, name devices after where they will be positioned, such as `Bird box outside Jim's window`
 
-    1. Set the *Device ID*. This is the unique ID used to identify the device when sending data to IoT Central and can't have spaces or special characters except for hyphens. You can leave this as the default, or create a device id similar to the name such as `jim-window-birdbox`.
+    1. Set the *Device ID*. This is the unique ID used to identify the device when sending data to IoT Central and can't have spaces or special characters except for hyphens. You can leave this as the default, or create a device ID similar to the name such as `jim-window-birdbox`.
 
     1. Ensure *Simulate this device* is set to **No**
 
@@ -288,9 +291,11 @@ You will start by creating a single device to get started, and in later days you
 
     ![The create a new device dialog create button](../images/iot-central-new-device-create-button.png)
 
+Take a note of this device ID.
+
 #### Set the device location
 
-Once the device has been created, it will appear in the devices list. You will now be able to set the location.
+Once the device has been created, it will appear in the devices list. You'll now be able to set the location.
 
 1. Select the device from the list
 
@@ -300,7 +305,7 @@ Once the device has been created, it will appear in the devices list. You will n
 
     ![The microbit location tab](../images/iot-central-microbit-location-tab.png)
 
-1. Search for the location of your smart garden ornament, or select it on the map. The search can find an address, and the map can be used to get a more precise location at that address. For example, if I had one positioned outside the South door of Microsoft Building 92 in Redmond, WA, USA I could:
+1. Search for the location of your smart garden ornament, or select it on the map. The search can find an address, and the map can be used to get a more precise location at that address. For example, if you had one positioned outside the South door of Microsoft Building 92 in Redmond, WA, USA you could:
 
     1. Search for `Microsoft Building 92`
 
@@ -356,7 +361,7 @@ You have a device configured, and a single view to see data for that device. The
 
 1. Select **Add tile**
 
-    ![The add tile button](../images/iot-central-dashboard-add-tile-button.png)
+    ![The add tile button](../images/iot-central-dashboard-add-tile-temperature-button.png)
 
 1. Select the cog in the Temperature tile on the dashboard and set the *Display range* to `Past 1 day`, the same as you did for the device view.
 
@@ -376,8 +381,40 @@ You have a device configured, and a single view to see data for that device. The
 
     ![The save button](../images/iot-central-dashboard-save-button.png)
 
-Once the dashboard is saved you will see it with the two tiles. The temperature tile will  show **Waiting for data** as no data has been sent yet. The location tile will show the location you set on the first device on a map.
+Once the dashboard is saved you'll see it with the two tiles. The temperature tile will  show **Waiting for data** as no data has been sent yet. The location tile will show the location you set on the first device on a map.
+
+### Get the IoT Central app connection details
+
+In tomorrows project you'll connect a Raspberry Pi to your IoT Central app. To do this you'll need 2 pieces of information - the ID scope which is an ID for the IoT central app, and one of the shared access signature (SAS) keys.
+
+1. From the side bar menu, select **Administration** in the *App settings* section
+
+    ![The administration menu option](../images/iot-central-administration-menu-item.png)
+
+1. Select **Device connection**
+
+    ![The device connection menu](../images/iot-central-administration-device-connection-menu-item.png)
+
+1. Take a note of the *ID scope* field. You can copy this with the copy button to the side of the value.
+
+    ![The ID scope field](../images/iot-central-administration-id-scope.png)
+
+    > You should keep this value private as it allows people to access your IoT Central app, hence why mine is blurred in the image above
+
+1. Select **View Keys** from the *SAS tokens on this app* section
+
+    ![The view keys button](../images/iot-central-administration-view-sas-keys.png)
+
+1. Take a note of the *Primary key* field. You can copy this with the copy button to the side of the value.
+
+    ![The SAS keys](../images/iot-central-administration-sas-keys.png)
+
+    > You should keep this value private as it allows people to access your IoT Central app, hence why mine is blurred in the image above
+
+1. Select **Close** to close the SAS keys dialog when you have the key
+
+    ![The close button](../images/iot-central-administration-sas-keys-close.png)
 
 ## Summary
 
-You've completed todays project - setting up Azure IoT Central. [Tomorrow](./2-connect.md) you will connect your Raspberry Pi to IoT Central and set up the micro:bit hub ready to gather data from your smart garden ornaments.
+You've completed todays project - setting up Azure IoT Central. [Tomorrow](./2-connect.md) you'll connect your Raspberry Pi to IoT Central and set up the micro:bit hub ready to gather data from your smart garden ornaments.

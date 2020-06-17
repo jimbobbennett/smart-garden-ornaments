@@ -16,16 +16,33 @@ This project is not limited to one household - if you have neighbors they can al
 
 ## What you'll need
 
+### Coding skills
+
+Although this guide tries to be as easy to use as possible, you will still need some technology skills. The Pi-based hub should be built by someone confident setting up a Raspberry Pi and have a basic understanding of coding with Python. The micro:bits should be programmed by someone confident programming with block-based coding.
+
+The following icons are used to indicate if a section covers the Azure IoT Central, using the Raspberry Pi or the micro:bit:
+
+| Icon | Description |
+| ---- | ----------- |
+| ![IoT Central logo](./images/iot-central-logo.png) | Azure IoT Central - will need someone with an Azure account|
+| ![Raspberry Pi Logo](./images/raspberry-pi-logo-small.png) | Raspberry Pi - will need someone confident setting up and programming a Raspberry Pi |
+| ![The micro:bit logo](./images/micro-bit-logo.png)| micro:bit - will need someone confident using block based programming on a BBC micro:bit |
+
+If you have never set up a Pi before, you can find some great guides on the [Raspberry Pi Help site](https://www.raspberrypi.org/help/).
+
+To learn mode about coding a micro:bit with Microsoft MakeCode, check out all the tutorials at [makecode.microbit.org](https://makecode.microbit.org).
+
 ### The Hub
 
 For the 'hub' that allows your micro:bits to connect to the cloud, you'll need the following:
 
-* A Raspberry Pi running Raspbian or Raspbian Lite. Any Pi will do that has internet connectivity, even the Pi Zero W (but not the base Pi Zero without WiFi).
+* A Raspberry Pi running Raspberry Pi OS or Raspberry Pi OS Lite. Any Pi will do that has internet connectivity, even the Pi Zero W (but not the base Pi Zero without WiFi).
 * An SD card for the Pi, at least 8GB in size
 * A BBC micro:bit
 * An appropriate USB cable to connect the micro:bit to the Pi. For example if you are using a Pi 3 or 4 you'll need a USB to micro USB cable, if you are using a Pi Zero you'll need a micro USB to micro USB cable or an adapter.
 * A USB power supply for the Pi. For the Pi 4 this needs to be USB-C, for other Pis this needs to be micro USB.
 * An Azure subscription. Instructions will be provided on how to set this up, and you'll either need to be a student over the age of 18 in higher education to sign up for a student account, or have access to a credit card to sign up for a free account.
+
   > If you sign up for a free account, your credit card will **NOT** be charged, it is just needed for verification.
 
 <!-- TODO - add photo -->
@@ -45,7 +62,32 @@ The micro:bits have a temperature sensor built in, so if you are just tracking t
 <!-- TODO - add sensors -->
 * Home made soil moisture sensor
 
-> The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.40 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn).
+## Cost
+
+The main cost to this project is the hardware. The project uses hardware that combines relatively low cost with ease of use - cheaper parts could be used with an added complexity.
+
+The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.40 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn).
+
+## How the project works
+
+If you just want to get everything up and running, you can skip this part and dive into the setup.
+
+<!-- TODO add picture of message flow -->
+
+The basic architecture is:
+
+* A micro:bit in a smart garden ornament reads a value such as temperature
+* This value, along with an ID, is sent as a message in coded form over the radio to any device that is listening
+* If a device picks up a message from another device, it re-sends it over the radio (with checks to make sure it only re-sends a message once)
+* The hub micro:bit connected to the Pi listens for messages from any device, and when detected sends them over the serial port to the Pi
+* The Pi listens on the serial port for messages. When it gets one it sends it to IoT Central, pretending to be the micro:bit by having multiple connections to IoT Central as using different device IDs.
+
+If you want to understand more about the architecture and how the code works, check out the following:
+
+* [How telemetry is sent from a micro:bit to IoT Central](./architecture-guides/how-telemetry-gets-to-iot-central.md)
+* [How the mesh network works](./architecture-guides/how-the-mesh-network-works.md)
+* [Walkthrough of the Hub code](./architecture-guides/hub-code-walkthrough.md)
+* [Walkthrough of the device code](./architecture-guides/device-code-walkthrough.md)
 
 ## How this guide is structured
 
@@ -55,7 +97,7 @@ Follow the links below to access the steps for each day:
 
 * [Day 1 - setup the cloud services](./days/1-setup.md)
 * [Day 2 - connect to the cloud](./days/2-connect.md)
-* Day 3 - build a mesh network to track temperatures
+* [Day 3 - build a mesh network to track temperatures](./steps/3-build-mesh.md)
 * Day 4 - build your first smart garden ornament
 * Day 5 - add additional sensors
 * [Additional ideas](./additional-ideas/)
