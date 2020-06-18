@@ -1,8 +1,8 @@
 # Connect to the cloud
 
-> ![Raspberry Pi logo](../images/raspberry-pi-logo-small.png)![The micro:bit logo](../images/micro-bit-logo.png)
+> ![Raspberry Pi logo](../images/raspberry-pi-logo-small.png)![The micro:bit logo](../images/micro-bit-logo.png)![IoT Central logo](../images/iot-central-logo.png)
 >
-> **This day has sections that require someone confident in setting up and programming a Raspberry Pi, and sections requiring someone confident using block based programming on a BBC micro:bit**
+> **This day has sections that require someone confident in setting up and programming a Raspberry Pi, and sections requiring someone confident using block based programming on a BBC micro:bit. You will also need access to IoT Central to see the temperature data**
 
 Yesterday you set up the cloud service to gather and show data from smart garden ornaments. Todays project is to set up the Raspberry Pi-based central hub that will send data to the cloud.
 
@@ -42,6 +42,7 @@ The hardware you'll need for this is:
   * For full size Pis you will need a micro-USB to USB cable
 * A USB cable or adapter to connect the micro:bit to your PC or Mac. This might be the same cable as the one you will use to connect the micro:bit to your Pi, but you may need a different cable or adapter. For example if you are using a MacBook Pro or Surface Go with USB-C ports you will need a USB-C to USB adapter or a USB-C to micro-USB cable.
 * A Mac, or PC running Windows or Linux, with an internet connection to program the Pi and the micro:bit
+* Optionally a keyboard/mouse/monitor to control the Pi if you don't want to use VNC/SSH or other headless tools
 
 ### Set up the Raspberry Pi
 

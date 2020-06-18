@@ -54,6 +54,7 @@ For each smart garden ornament you'll need the following:
 * A BBC micro:bit
 * A battery pack for the micro:bit
 * A garden ornament that can house the micro:bit and keep it dry in the event of rain. This could be a bird box, a garden gnome, fairy house, anything that is outdoor safe and has space to put the micro:bit and battery pack inside.
+* Blank stickers to put labels on the micro:bits
 
 <!-- TODO - add photo -->
 
@@ -105,6 +106,8 @@ Follow the links below to access the steps for each day:
   * Add rules to get alerts when a sensor value is in a given range
 
 All the code you need for the Pi and micro:bit is all in the [`code`](./code/) folder. Each step will include full instructions on the code you need, including code listings and the micro:bit code both as JavaScript code that can be pasted into MakeCode and pictures of the blocks that you can create yourself.
+
+As new concepts are covered (such as setting up IoT Central, or using new blocks in MakeCode), full descriptions are given with detailed pictures. The next time the same concept is covered, there will be less pictures and description.
 
 ## Contributing to this project
 
