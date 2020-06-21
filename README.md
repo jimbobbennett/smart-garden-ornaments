@@ -99,13 +99,13 @@ Follow the links below to access the steps for each day:
 * [Day 1 - setup the cloud services](./days/1-setup.md)
 * [Day 2 - connect to the cloud](./days/2-connect.md)
 * [Day 3 - build a sensor mesh network to track temperatures](./steps/3-build-mesh.md)
-* Day 4 - build your first smart garden ornament
+* [Day 4 - build your first smart garden ornament](4-build-garden-ornament.md)
 * Day 5 - add additional sensors
 * [Additional ideas](./additional-ideas/)
   * Add multiple hubs so more households can get involved
   * Add rules to get alerts when a sensor value is in a given range
 
-All the code you need for the Pi and micro:bit is all in the [`code`](./code/) folder. Each step will include full instructions on the code you need, including code listings and the micro:bit code both as JavaScript code that can be pasted into MakeCode and pictures of the blocks that you can create yourself.
+All the code you need for the Pi is in the [`pi-hub`](./pi-hub/) folder. The code for the micro:bit portions is in separate GitHub repos that can be imported into MakeCode. The code for the micro:bit Hub is at [github.com/jimbobbennett/smart-garden-ornaments-microbit-hub](https://github.com/jimbobbennett/smart-garden-ornaments-microbit-hub), and the device code is available at [github.com/jimbobbennett/smart-garden-ornaments-microbit-device](https://github.com/jimbobbennett/smart-garden-ornaments-microbit-device).
 
 As new concepts are covered (such as setting up IoT Central, or using new blocks in MakeCode), full descriptions are given with detailed pictures. The next time the same concept is covered, there will be less pictures and description.
 

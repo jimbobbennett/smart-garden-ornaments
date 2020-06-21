@@ -95,7 +95,7 @@ Do this by following these instructions in the [BBC micro:bit users guide](https
 >
 > **This section should be done by someone confident in setting up and programming a Raspberry Pi**
 
-Rather than walk through writing the Pi code by hand, you can use an installer to install the source code, configure the Python packages needed, and add an entry to the devices CronTab to ensure the code is running every time the device reboots. You can view this script in the [code/iot-gateway/pi-hub](./code/iot-gateway/pi-hub/install.sh) folder.
+Rather than walk through writing the Pi code by hand, you can use an installer to install the source code, configure the Python packages needed, and add an entry to the devices CronTab to ensure the code is running every time the device reboots. You can view this `install.sh` script in the [pi-hub](./pi-hub) folder.
 
 This script will:
 
@@ -247,9 +247,9 @@ Once the code is ready, it needs to be copied to the micro:bit.
 
 1. If you are using the Edge browser, you can pair the browser to your micro:bit and download the code with one click
 
-    1. Select the Cog on the MakeCode top menu bar
+    1. Select the three ellipses on the MakeCode **Download** button
 
-        ![The MakeCode cog button](../images/makecode-settings-button.png)
+        ![The MakeCode download button](../images/makecode-download-button-ellipses.png)
 
     1. Select **Pair device**
 
@@ -384,10 +384,6 @@ The radio can be set to listen for different group numbers - this is a way to al
 
 ### Write the code to forward radio messages to the serial port
 
-> If you would rather code this in JavaScript or Python, you can find the code in the [code/iot-hub/microbit-hub](../code/iot-hub/microbit-hub) folder. The [`microbit-hub.js`](../code/iot-hub/microbit-hub/microbit-hub.js) file has the JavaScript code, and this can be pasted directly into the JavaScript editor. The [`microbit-hub.py`](../code/iot-hub/microbit-hub/microbit-hub.py) file has the Python code, and this can be pasted directly into the Python editor.
->
-> You can also paste the code in and change to blocks to see how the code would look as blocks.
-
 1. Unplug your micro:bit from your Raspberry Pi and connect it to your PC or Mac
 
 1. From your browser, make sure the MakeCode editor is still open. If not, head to [makecode.microbit.org](https://makecode.microbit.org/) and open the `micro:bit hub` project.
@@ -434,17 +430,27 @@ Your final program should look like this:
 
 ![final code showing radio set group in on start, forever empty and serial write line in on radio received](../images/makecode-hub-final-code.png)
 
-### Optional - add LEDs to show the program is running
+### Add LEDs to show the program is running
 
-As an optional extra, you can add visual feedback to indicate that the program is running, and when messages are received. For example, having a flashing heart icon to show a heartbeat indicating the program is running, and a duck icon whenever a message is received.
+To help see what is happening, you can add visual feedback to indicate that the program is running, and when messages are received. For example, having a flashing heart icon to show a heartbeat indicating the program is running, and a duck icon whenever a message is received.
 
-To set a heartbeat, drag a **show icon** block to the **forever** block, followed by a short **pause** block, a **clear screen** block and another, longer **pause**. This will show the heart for the length of the first pause, then have the screen clear for the second pause.
+1. To set a heartbeat:
 
-![showing a flashing heartbeat LED in a forever block](../images/makecode-forever-hub-heartbeat.png)
+    1. Drag a **show icon** block to the **forever** block, selecting the heart icon
+    1. Add by a **pause** block with a time of 100ms after the **show icon** block
+    1. Add a **clear screen** block below the **pause** block
+    1 Add another **pause** block below the **clear screen** block, and set the time to 2s
 
-To show an image when a message is received, add a **show icon** block to the **on radio received** block before **serial write line**, then add a **clear screen** block after.
+    This will show the heart for the length of the first pause, then have the screen clear for the second pause.
 
-![showing a duck on the LEDs before sending data over serial](../images/makecode-radio-hub-duck.png)
+    ![showing a flashing heartbeat LED in a forever block](../images/makecode-forever-hub-heartbeat.png)
+
+1. To show an image when a message is received:
+
+    1. Add a **show icon** block to the **on radio received** block before the **serial write line** block, selecting the duck icon
+    1. Add a **clear screen** block after the **serial write line** block
+
+    ![showing a duck on the LEDs before sending data over serial](../images/makecode-radio-hub-duck.png)
 
 ### Download the code to the micro:bit
 

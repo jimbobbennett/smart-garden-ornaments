@@ -365,6 +365,8 @@ You have a device configured, and a single view to see data for that device. The
 
 1. Select the cog in the Temperature tile on the dashboard and set the *Display range* to `Past 1 day`, the same as you did for the device view.
 
+1. Tiles are sized based on a grid. The tile by default is 2x2, meaning it is 2 grid squares wide by two high. The graph will be easier to see if it is wider, so drag the bottom corner to make it wider.
+
 1. Select **Update**
 
 #### Add the device locations on a map
