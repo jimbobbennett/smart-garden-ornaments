@@ -52,7 +52,7 @@ For the 'hub' that allows your micro:bits to connect to the cloud, you'll need t
 For each smart garden ornament you'll need the following:
 
 * A BBC micro:bit
-* A battery pack for the micro:bit
+* A battery pack for the micro:bit, along with batteries. To keep the micro:bits running as long as possible, use a 2xAA battery pack, with AA alkaline batteries. Rechargeable batteries are not recommended as they provide a lower voltage. You can read more recommendations on powering the micro:bit in the [micro:bit support docs](https://support.microbit.org/support/solutions/articles/19000013982-connecting-a-power-supply-to-the-micro-bit).
 * A garden ornament that can house the micro:bit and keep it dry in the event of rain. This could be a bird box, a garden gnome, fairy house, anything that is outdoor safe and has space to put the micro:bit and battery pack inside.
 * Blank stickers to put labels on the micro:bits
 
@@ -100,7 +100,7 @@ Follow the links below to access the steps for each day:
 * [Day 2 - connect to the cloud](./days/2-connect.md)
 * [Day 3 - build a sensor mesh network to track temperatures](./steps/3-build-mesh.md)
 * [Day 4 - build your first smart garden ornament](4-build-garden-ornament.md)
-* Day 5 - add additional sensors
+* [Day 5 - add additional sensors](5-add-more-sensors.md)
 * [Additional ideas](./additional-ideas/)
   * Add multiple hubs so more households can get involved
   * Add rules to get alerts when a sensor value is in a given range
@@ -111,7 +111,7 @@ As new concepts are covered (such as setting up IoT Central, or using new blocks
 
 ## Contributing to this project
 
-We'd **LOVE** you to contribute to this project! If you find mistakes in this guide please raise an issue or a PR. If you have additional ideas for ways to extend this project, or want to add instructions for more sensors please fork this repo and add them to the [Additional ideas](./additional-ideas/) section in a PR. We'd also love it if you want to share your stories - how did you set this up, what ornaments did you use, what data did you gather. Please fork the repo raise a PR to add these to the [Stories](./stories/) section. All contributions must follow our code of conduct.
+We'd **LOVE** you to contribute to this project! If you find mistakes in this guide please raise an issue or a PR. If you have additional ideas for ways to extend this project, or want to add instructions for more sensors or different ornaments please fork this repo and add them to the [Additional ideas](./additional-ideas/) section in a PR. We'd also love it if you want to share your stories - how did you set this up, what ornaments did you use, what data did you gather. Please fork the repo raise a PR to add these to the [Stories](./stories/) section. All contributions must follow our code of conduct.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=smart_garden_ornaments-github-jabenn). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=smart_garden_ornaments-github-jabenn) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 

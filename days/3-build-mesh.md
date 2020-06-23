@@ -1,4 +1,4 @@
-# Build a micro:bit sensor mesh network
+# Day 3 - Build a micro:bit sensor mesh network
 
 > ![Raspberry Pi logo](../images/raspberry-pi-logo-small.png)![The micro:bit logo](../images/micro-bit-logo.png)![IoT Central logo](../images/iot-central-logo.png)
 >
@@ -369,10 +369,11 @@ micro:bits have a radio that in clear air can send data about 70 meters. This di
 
 A way to work around this is a mesh network. Mesh networks by having multiple devices connected to the mesh, known as nodes, and each one can forward on messages until they reach the Hub.
 
+> There are a number of professional mesh networking standard used every day, such as [Zigbee](https://zigbeealliance.org), which is used in home automation. These are a lot more complicated than the version here, and include things like security.
+
 For example, if you had 2 micro:bits numbered 1 and 2, with 1 too far from the Hub to send a message, but 2 is half way between 1 and the Hub, and close enough to both to send a receive messages. If 2 sends a message, the Hub can receive it. If 1 sends a message, the Hub can't receive it, but 2 can - so 2 receives the message and re-sends it to the Hub. That way the message jumps from 1 to 2 to the Hub.
 
 <!-- TODO - picture -->
-
 
 To build this in the micro:bits involves adding blocks to receive radio messages, the same as the Hub micro:bit does, but instead of sending them to the serial connection, re-send the exact same message
 

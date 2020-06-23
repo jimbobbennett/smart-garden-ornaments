@@ -1,4 +1,4 @@
-# Connect to the cloud
+# Day 2 - Connect to the cloud
 
 > ![Raspberry Pi logo](../images/raspberry-pi-logo-small.png)![The micro:bit logo](../images/micro-bit-logo.png)![IoT Central logo](../images/iot-central-logo.png)
 >
@@ -439,7 +439,7 @@ To help see what is happening, you can add visual feedback to indicate that the 
     1. Drag a **show icon** block to the **forever** block, selecting the heart icon
     1. Add by a **pause** block with a time of 100ms after the **show icon** block
     1. Add a **clear screen** block below the **pause** block
-    1 Add another **pause** block below the **clear screen** block, and set the time to 2s
+    1 Add another **pause** block below the **clear screen** block, and set the time to 5s
 
     This will show the heart for the length of the first pause, then have the screen clear for the second pause.
 
