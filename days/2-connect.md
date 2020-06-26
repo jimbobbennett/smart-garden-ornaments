@@ -133,7 +133,7 @@ Messages are sent using this format:
 <device_code>:<data_type_code>:<data_value>
 ```
 
-The `<device_code>` is used to look up which device send the message. The `<data_type_code>` is used to get the type of data, such as a temperature value, as well as the type of the data such as a number or text. `<data_value>` is the actual data.
+The `<device_code>` is used to look up which device send the message. The `<data_type_code>` is used to get the type of data, such as a temperature value. `<data_value>` is the actual data.
 
 One example would be:
 
@@ -141,7 +141,7 @@ One example would be:
 1:t:25
 ```
 
-This would be from a device with code `1` which will be used to get the actual IoT Central device ID, and contain a temperature value of 25°C which will be sent as a number.
+This would be from a device with code `1` which will be used to get the actual IoT Central device ID, and contain a temperature value of 25°C.
 
 > You can read more on how this works in the [how telemetry is sent from a micro:bit to IoT Central architecture guide](../architecture-guides/how-telemetry-gets-to-iot-central.md).
 
@@ -149,15 +149,11 @@ The lookup is in the `mappings.py` file.
 
 1. Open the `mappings.py` file from the `PiHub` folder in the Pi's home directory using your favorite text editor. For example Visual Studio Code via the remote development extension, or `nano` via SSH.
 
-1. The code has three mappings, defined using Python dictionaries:
+1. The code has two mappings, defined using Python dictionaries:
 
     ```sh
     value_types = {
         "t" : "temperature",
-    }
-
-    value_conversion = {
-        "t" : float,
     }
 
     devices = {
@@ -165,7 +161,7 @@ The lookup is in the `mappings.py` file.
     }
     ```
 
-    These map values received with a data type code of `t` to temperature measurements as numbers. They also include a mapping from a device code of `1` to a device ID of `device-1`.
+    These map values received with a data type code of `t` to temperature measurements. They also include a mapping from a device code of `1` to a device ID of `device-1`.
 
 1. Edit the `devices` dictionary to map `"1"` to the ID of the first device that you created in IoT Central, in quotes. For example, if you used the device ID `jim-window-birdbox`, make sure the line reads `"1" : "jim-window-birdbox",`
 
