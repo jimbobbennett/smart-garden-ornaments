@@ -4,7 +4,7 @@
 
 <!-- TODO - add photo -->
 
-This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn).
+This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn).
 
 ## How it works
 
@@ -67,7 +67,7 @@ The micro:bits have a temperature sensor built in, so if you are just tracking t
 
 The main cost to this project is the hardware. The project uses hardware that combines relatively low cost with ease of use - cheaper parts could be used with an added complexity.
 
-The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.40 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn).
+The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.40 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=julyot-github-jabenn).
 
 ## How the project works
 
@@ -113,13 +113,13 @@ As new concepts are covered (such as setting up IoT Central, or using new blocks
 
 We'd **LOVE** you to contribute to this project! If you find mistakes in this guide please raise an issue or a PR. If you have additional ideas for ways to extend this project, or want to add instructions for more sensors or different ornaments please fork this repo and add them to the [Additional ideas](./additional-ideas/) section in a PR. We'd also love it if you want to share your stories - how did you set this up, what ornaments did you use, what data did you gather. Please fork the repo raise a PR to add these to the [Stories](./stories/) section. All contributions must follow our code of conduct.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=smart_garden_ornaments-github-jabenn). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=smart_garden_ornaments-github-jabenn) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=julyot-github-jabenn). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=julyot-github-jabenn) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Learn more, get certified
 
 If you want to learn more about Azure IoT Services, then check out the following:
 
-* [IoT learning paths on Microsoft Learn](https://docs.microsoft.com/learn/browse/?term=IOT&WT.mc_id=smart_garden_ornaments-github-jabenn)
-* [The IoT show on Channel9](https://channel9.msdn.com/Shows/Internet-of-Things-Show/?WT.mc_id=smart_garden_ornaments-github-jabenn)
+* [IoT learning paths on Microsoft Learn](https://docs.microsoft.com/learn/browse/?term=IOT&WT.mc_id=julyot-github-jabenn)
+* [The IoT show on Channel9](https://channel9.msdn.com/Shows/Internet-of-Things-Show/?WT.mc_id=julyot-github-jabenn)
 
-Once you have upskilled as an IoT developer, why not get certified with our upcoming AZ-220 Azure IoT Developer certification. Check out the details on our [certification page](https://docs.microsoft.com/learn/certifications/azure-iot-developer-specialty?WT.mc_id=smart_garden_ornaments-github-jabenn)
+Once you have upskilled as an IoT developer, why not get certified with our upcoming AZ-220 Azure IoT Developer certification. Check out the details on our [certification page](https://docs.microsoft.com/learn/certifications/azure-iot-developer-specialty?WT.mc_id=julyot-github-jabenn)

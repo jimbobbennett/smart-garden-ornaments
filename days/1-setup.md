@@ -6,7 +6,7 @@
 
 Todays project is to set up the cloud service. This service will take data from the micro:bits via the Raspberry Pi Hub and show it on a dashboard - for example showing temperatures from different smart ornaments on a graph and showing their locations on a map.
 
-The cloud service that will be used is [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=smart_garden_ornaments-github-jabenn), an IoT software-as-a-service platform. IoT Central allows you to configure apps - separate projects that can have one or more devices sending in data, as well as dashboard that you can use to see that data. In this case, the IoT Central app will be a project for your smart garden ornaments, connecting to your micro:bits to gather sensor data and plotting this data on a dashboard.
+The cloud service that will be used is [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn), an IoT software-as-a-service platform. IoT Central allows you to configure apps - separate projects that can have one or more devices sending in data, as well as dashboard that you can use to see that data. In this case, the IoT Central app will be a project for your smart garden ornaments, connecting to your micro:bits to gather sensor data and plotting this data on a dashboard.
 
 <!-- TODO - add dashboard screenshot -->
 
@@ -23,9 +23,9 @@ The steps you'll take to set this up are:
 
 To use Azure services you'll need an Azure subscription. If you don't have a subscription you can sign up for free.
 
-* If you are a student aged 18 and up and have an email address from an academic institution, you can sign up for the free Azure for Students offer at [azure.microsoft.com/free/students](https://azure.microsoft.com/free/students/?WT.mc_id=smart_garden_ornaments-github-jabenn) without a credit card. At the time of writing this gives you $100 of credit to use over 12 months, as well as free tiers of a number of services for that 12 months. At the end of the 12 months, if you are still a student you can renew and get another $100 in credit and 12 months of free services.
+* If you are a student aged 18 and up and have an email address from an academic institution, you can sign up for the free Azure for Students offer at [azure.microsoft.com/free/students](https://azure.microsoft.com/free/students/?WT.mc_id=julyot-github-jabenn) without a credit card. At the time of writing this gives you $100 of credit to use over 12 months, as well as free tiers of a number of services for that 12 months. At the end of the 12 months, if you are still a student you can renew and get another $100 in credit and 12 months of free services.
 
-* If you are not a student, you can sign up at [azure.microsoft.com/free](https://azure.microsoft.com/free/?WT.mc_id=smart_garden_ornaments-github-jabenn). You'll need a credit card for verification purposes only, you'll not be billed unless you decide to upgrade your account to a paid offering. At the time of writing the free account will give you US$200 of free credit to spend on what you like in the first 30 days, 12 months of free services, plus a load of services that have tiers that are always free.
+* If you are not a student, you can sign up at [azure.microsoft.com/free](https://azure.microsoft.com/free/?WT.mc_id=julyot-github-jabenn). You'll need a credit card for verification purposes only, you'll not be billed unless you decide to upgrade your account to a paid offering. At the time of writing the free account will give you US$200 of free credit to spend on what you like in the first 30 days, 12 months of free services, plus a load of services that have tiers that are always free.
 
 ## Create an Azure IoT Central app
 
@@ -33,7 +33,7 @@ Azure IoT Central uses the term 'App' to refer to a project containing one or mo
 
 ### Log in to IoT Central
 
-1. Head to [apps.azureiotcentral.com](https://apps.azureiotcentral.com/?WT.mc_id=smart_garden_ornaments-github-jabenn)
+1. Head to [apps.azureiotcentral.com](https://apps.azureiotcentral.com/?WT.mc_id=julyot-github-jabenn)
 
 1. From the side bar menu, select **My apps**
 
@@ -67,7 +67,7 @@ Azure IoT Central uses the term 'App' to refer to a project containing one or mo
 
     1. Select the nearest location to you.
 
-        > The location determines which Azure Region the app will be created in. Azure has multiple regions all around the world, and you always want to select the one closest to where your devices will be connecting from. You can read more about Azure Regions including seeing where they are in the [Azure regions documentation](https://azure.microsoft.com/global-infrastructure/regions/?WT.mc_id=smart_garden_ornaments-github-jabenn).
+        > The location determines which Azure Region the app will be created in. Azure has multiple regions all around the world, and you always want to select the one closest to where your devices will be connecting from. You can read more about Azure Regions including seeing where they are in the [Azure regions documentation](https://azure.microsoft.com/global-infrastructure/regions/?WT.mc_id=julyot-github-jabenn).
 
     ![The new application form with details filled in](../images/iot-central-new-application-details.png)
 

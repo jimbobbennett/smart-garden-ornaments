@@ -179,7 +179,7 @@ The sample code to create dummy data will loop forever, sending coded telemetry 
 
 ### Code the micro:bit using MakeCode
 
-You will need a browser to create code using MakeCode. Microsoft Edge is the recommended browser for this - it runs on Windows and macOS and is able to download code directly to your micro:bit from inside MakeCode. If you don't have Edge installed, you can download it from the [Edge installer page](https://www.microsoft.com/edge?WT.mc_id=smart_garden_ornaments-github-jabenn).
+You will need a browser to create code using MakeCode. Microsoft Edge is the recommended browser for this - it runs on Windows and macOS and is able to download code directly to your micro:bit from inside MakeCode. If you don't have Edge installed, you can download it from the [Edge installer page](https://www.microsoft.com/edge?WT.mc_id=julyot-github-jabenn).
 
 1. From your browser, head to [makecode.microbit.org](https://makecode.microbit.org/)
 
