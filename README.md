@@ -8,7 +8,7 @@ This is a fun week long project for those who want to take their first steps int
 
 ## How it works
 
-Each smart garden ornament is based around a [BBC micro:bit](https://microbit.org), programmed using [Microsoft MakeCode](https://microbit.org/code/). These micro:bits sit inside whatever ornament you have, such as a bird box or garden gnome, and gather data about the outside world. This data can come from the built-in temperature sensor, or external sensors such as microphones, proximity senors or soil moisture sensors. These micro:bits will then send this data to other micro:bits via the built-in radio. Each micro:bit will forward on the message just like passing notes in class until it reaches a 'hub' micro:bit connected to a Raspberry Pi. This will then send the message on to the cloud to plot on a chart.
+Each smart garden ornament is based around a [BBC micro:bit](https://microbit.org), programmed using [Microsoft MakeCode](https://microbit.org/code/). These micro:bits sit inside whatever ornament you have, such as a bird box or garden gnome, and gather data about the outside world - also know as telemetry. This data can come from the built-in temperature sensor, or external sensors such as microphones, proximity senors or soil moisture sensors. These micro:bits will then send this data to other micro:bits via the built-in radio. Each micro:bit will forward on the message just like passing notes in class until it reaches a 'hub' micro:bit connected to a Raspberry Pi. This will then send the message on to the cloud to plot on a chart.
 
 <!-- TODO - add photo -->
 

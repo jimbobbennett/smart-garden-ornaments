@@ -59,9 +59,11 @@ Azure IoT Central uses the term 'App' to refer to a project containing one or mo
 
     1. Select **Custom application** for the *Application template*
 
-    1. Select the **Standard 1** pricing plan. This plan is free for the first two devices, with a limit of about 6-7 messages an hour per device, which should be more than enough for the kind of data you'll be collecting. More devices are US$0.40 per month per device at the time of writing.
+    1. Select the **Standard 2** pricing plan. This plan is free for the first two devices, with a limit of about 40 messages an hour per device, which should be more than enough for the kind of data you'll be collecting. More devices are US$0.70 (70c) per month per device at the time of writing.
 
         > There is a free tier allowing up to 5 devices. Apps created with the free tier are deleted after 7 days, so the Standard 1 tier allows you to keep your apps for as long as you need.
+
+        > You can also use the Standard 1 tier at US$0.40 (40c) per month, but if so you'll need to send messages less often. The instructions here send a message every 10 minutes for each type of sensor data being collected which is about as many as this tier allows. Fi you want to send more data, reduce the rate
 
     1. In the *Billing info* section, select your *Directory* and *Azure Subscription*. If you only have one subscription, then there will only be one directory to select, if you have multiple (for example a work or university subscription and a personal free subscription), select the appropriate directory.
 
