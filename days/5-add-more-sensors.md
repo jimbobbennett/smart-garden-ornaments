@@ -111,19 +111,6 @@ The new interface version will be created as a copy of the original. The `Temper
 
     ![The migration progress dialog](../images/iot-central-device-operations-migration.png)
 
-#### Update the dashboard
-
-The dashboard show the device locations and temperature values. TO show light values, a new tile needs to be added.
-
-1. From the side bar menu, select **Dashboard**
-
-1. Select the **Edit** button on the top menu
-
-1. Add and configure a tile for the Light values in the same way you added the Temperature tile. Ensure all the devices are selected and the time range matches the time range you set for the temperature.
-
-
-<!-- To Do - add this once the data is showing -->
-
 ### Add a mapping to the Hub for the light values
 
 Once IoT Central is ready to receive light values, a mapping needs to tbe added to the Hub so that the micro:bits can send the light values using a code to keep the meesgae size down.
@@ -156,6 +143,22 @@ Once IoT Central is ready to receive light values, a mapping needs to tbe added 
     ![setting the params](../images/makecode-add-second-call-send-message-with-params-forever.png)
 
 1. Download this code to all the micro:bits. Don't forget to update the device IDs as you download the code.
+
+### See the Light values in IoT Central
+
+The dashboard in IoT Central show the device locations and temperature values. To show light values, a new tile needs to be added.
+
+1. Open your IoT Central app
+
+1. From the side bar menu, select **Dashboard**
+
+1. Select the **Edit** button on the top menu
+
+1. Add and configure a tile for the Light values in the same way you added the Temperature tile. Ensure all the devices are selected and the time range matches the time range you set for the temperature.
+
+> This can be a bit quirky, sometimes the new property doesn't appear. If this happens create a brand new dashboard with temperature, light and the locations showing, then delete the first dashboard
+
+![The dashboard showing light and temperature values](../images/iot-central-light-and-temperature-data-on-dashboard.png)
 
 ## Soil moisture
 
