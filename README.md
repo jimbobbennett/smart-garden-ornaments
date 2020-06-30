@@ -1,5 +1,7 @@
 # Smart Garden Ornaments
 
+**Under construction! Come back later for the complete version of this guide**
+
 *Ever wanted to track things happening in your garden and neighborhood using smart garden ornaments? Now you can using BBC micro:bits and a cloud-based IoT service.*
 
 <!-- TODO - add photo -->
