@@ -82,7 +82,7 @@ The micro:bits have a temperature sensor built in, so if you are just tracking t
 
 The main cost to this project is the hardware. The project uses hardware that combines relatively low cost with ease of use - cheaper parts could be used with an added complexity.
 
-The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.40 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=julyot-github-jabenn).
+The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.70 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=julyot-github-jabenn).
 
 ## How the project works
 
