@@ -25,7 +25,7 @@ The message flow is:
 
 The job of the Hub is to redirect messages to IoT Central. In traditional IoT scenarios, a single device connects to the cloud and sends telemetry as a single device. In this scenario, the Hub is acting as a gateway and re-routing messages from other devices, essentially pretending to be multiple devices at different times, probably using a set of fake noses and different hats.
 
-A connection to IoT Central is created in code using a device client object, and this maintains a connection as a specific device. The Hub can pretend to be multiple devices by creating multiple connections, once per device.
+A connection to IoT Central is created in code using a device client object, and this maintains a connection as a specific device. The Hub can pretend to be multiple devices by creating multiple connections, one per device.
 
 When messages are received from a micro:bit, the relevant device connection for that device is used to send the message.
 

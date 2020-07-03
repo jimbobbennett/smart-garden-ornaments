@@ -68,7 +68,7 @@ The way this is enforced is:
   * If the last time was less than 9 minutes ago, the message is ignored. Messages are only sent every 10 minutes, so anything less than this is a message bouncing around the network
   * If the last time is more than 9 minutes ago, the message is forwarded on, and the device time is stored
 
-There isn't a clock as such in a micro:bit - you can't get the current real world time. Instead each micro:bit has a running time, and this is the number of milliseconds that the micro:bit has been running since it was last powered up. This is fine to use to check message times as the mesh doesn't care what the actual time was that the message was sent, just if it's within 9 minutes of now, with now being the time since the micro:bit was powered on.
+There isn't a clock as such in a micro:bit - you can't get the current real world time. Instead each micro:bit has a running time, and this is the number of milliseconds that the micro:bit has been running since it was last powered up. This is fine to use to check message times as the mesh doesn't care what the actual time was that the message was sent, just if it's within 9 minutes of *now*, with *now* being the number of seconds since the micro:bit was powered on.
 
 ### Flood control in the Hub
 

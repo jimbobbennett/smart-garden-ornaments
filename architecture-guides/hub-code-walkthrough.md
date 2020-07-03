@@ -26,7 +26,7 @@ This block contains the important code. `on radio received` is run every time th
 
 ## Raspberry Pi code
 
-The Pi code is responsible for taking the messages sent over the serial cable, decoding them into a form that IoT Central can understand, and sending them to IoT Central. THis code is made of 2 Python files - [`mappings.py`](../pi-hub/mappings.py) and [`app.py`](../pi-hub/app.py)
+The Pi code is responsible for taking the messages sent over the serial cable, decoding them into a form that IoT Central can understand, and sending them to IoT Central. This code is made of 2 Python files - [`mappings.py`](../pi-hub/mappings.py) and [`app.py`](../pi-hub/app.py)
 
 > The code shown below is condensed, removing the comments and print statements from the original files to save space. The comments are not needed here as the code is being explained, and the print statements are only needed when running the code to see what is happening.
 
@@ -122,11 +122,11 @@ Telemetry needs to be sent to IoT Central as a JSON document, with key/value pai
 
 ```json
 {
-    'Temperature': 25.0
+    "Temperature" : 25.0
 }
 ```
 
-The call to `json.dumps` will convert this to a string representation that can be sent to IoT Central - `"{'Temperature':25.0}"`.
+The call to `json.dumps` will convert this to a string representation that can be sent to IoT Central - `{"Temperature":25.0}`.
 
 ```python
 async def message_worker(queue):

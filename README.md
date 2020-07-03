@@ -1,12 +1,10 @@
 # Smart Garden Ornaments
 
-**Under construction! Come back later for the complete version of this guide**
-
 *Ever wanted to track things happening in your garden and neighborhood using smart garden ornaments? Now you can using BBC micro:bits and a cloud-based IoT service.*
 
 ![A bird box in a tree with a micro bit visible inside](./images/smart-garden-ornament-birdbox.png)
 
-This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn).
+This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids, and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn).
 
 ## How it works
 
@@ -62,7 +60,7 @@ For each smart garden ornament you'll need the following:
 
 * A battery pack for the micro:bit, along with batteries. To keep the micro:bits running as long as possible, use a 2xAA battery pack, with AA alkaline batteries. Rechargeable batteries are not recommended as they provide a lower voltage. You can read more recommendations on powering the micro:bit in the [micro:bit support docs](https://support.microbit.org/support/solutions/articles/19000013982-connecting-a-power-supply-to-the-micro-bit).
 
-    > Although you can use AAA batteries, they don't last anywhere near as long, so to gather data over longer periods to time use AA batteries. You should be able to gather data for about a week on one pair of batteries
+    > Although you can use AAA batteries, they don't last anywhere near as long, so to gather data over longer periods to time use AA batteries. You should be able to gather data for about a week on one pair of AA batteries
 
 * A garden ornament that can house the micro:bit and keep it dry in the event of rain. This could be a bird box, a garden gnome, fairy house, anything that is outdoor safe and has space to put the micro:bit and battery pack inside.
 
@@ -78,11 +76,13 @@ The micro:bits have a temperature sensor built in, so if you are just tracking t
 * Light sensor
 * Home made soil moisture sensor
 
+> If you want to use other sensors, check out the great kits from places like [SparkFun](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-microbit-experiment-guide/experiment-7-reading-the-temperature-sensor) and [Kitronik](https://kitronik.co.uk/collections/microbit-accessories).
+
 ## Cost
 
 The main cost to this project is the hardware. The project uses hardware that combines relatively low cost with ease of use - cheaper parts could be used with an added complexity.
 
-The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments they your will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.70 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=julyot-github-jabenn).
+The cloud service used may come with a small cost. It is free for the first 2 devices used, so if you want to use more smart ornaments then your Azure account will be billed. If you have signed up for a student or free account this can come from the credit you are given on sign up leading to no actual cost. The cost at the time of writing is US$0.70 per additional device per month. You can read more details on pricing on the [Azure IoT Central pricing page](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=julyot-github-jabenn).
 
 ## How the project works
 
@@ -107,7 +107,7 @@ If you want to understand more about the architecture and how the code works, ch
 
 ## How this guide is structured
 
-This guide is broken down into a number of days. For each day the project should take no more than about an hour and adds another part to the project. Each day will contain multiple parts, labelled as either beginner or advanced. The advanced parts should be done by someone with some experience, the beginner parts are ideal for those just getting started with block based programming. Older kids with some programming experience may be able to complete the entire project, but will require an adult to set up the Azure resources as these may require a credit card and require a sign up from someone over the age of 18.
+This guide is broken down into a number of days. For each day the project should take no more than about an hour and adds another part to the finished project. Each day will contain multiple parts, labelled as either beginner or advanced. The advanced parts should be done by someone with some experience, the beginner parts are ideal for those just getting started with block based programming. Older kids with some programming experience may be able to complete the entire project, but will require an adult to set up the Azure resources as these may require a credit card and require a sign up from someone over the age of 18.
 
 Follow the links below to access the steps for each day:
 
@@ -117,8 +117,8 @@ Follow the links below to access the steps for each day:
 * [Day 4 - build your first smart garden ornament](./days/4-build-garden-ornament.md)
 * [Day 5 - add additional sensors](./days/5-add-more-sensors.md)
 * [Additional ideas](./additional-ideas/)
-  * Add multiple hubs so more households can get involved
-  * Add rules to get alerts when a sensor value is in a given range
+  * [Add multiple hubs so more households can get involved](./additional-ideas/add-multiple-hubs.md)
+  * [Add rules to get alerts when a sensor value is in a given range](./additional-ideas/add-rules.md)
 
 All the code you need for the Pi is in the [`pi-hub`](./pi-hub/) folder. The code for the micro:bit portions is in separate GitHub repos that can be imported into MakeCode. The code for the micro:bit Hub is at [github.com/jimbobbennett/smart-garden-ornaments-microbit-hub](https://github.com/jimbobbennett/smart-garden-ornaments-microbit-hub), and the device code is available at [github.com/jimbobbennett/smart-garden-ornaments-microbit-device](https://github.com/jimbobbennett/smart-garden-ornaments-microbit-device).
 

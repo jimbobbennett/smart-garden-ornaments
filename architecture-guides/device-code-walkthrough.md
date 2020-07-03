@@ -14,6 +14,8 @@ The micro:bit code has two jobs. Firstly, it is designed to listen to sensor dat
 
 The `on start` block is run once when the device is first powered up. It starts by configuring the radio - setting the group to 1 and setting the power as high as possible. All micro:bits on the same radio group can message each other, but won't receive messages from other radio groups. Power is a scale from 0-7, with 7 being the highest power. Over clear air, a power of 7 means radio signals can reach up to 70 metres!
 
+> The higher the radio power, the faster the batteries will lose power. If you know a device is going to be close to another then you can reduce the power to save battery life.
+
 Next the brightness is set to 128. This is the brightness of the LEDs and is on a scale from 0-255. Reducing the brightness will help with the battery life.
 
 The `device_id` is then set. This is not the device ID used by IoT Central, but a code that is mapped by the Hub. Radio messages sent and received by micro:bits are limited to 19 characters, so to keep the message size down, single or double digit device IDs can be used instead of the full device ID. The Hub will then map these. This `device_id` value needs to be changed for each micro:bit that is programmed - this is the only bit of code that needs to be updated when programming a micro:bit.
@@ -36,7 +38,7 @@ Messages don't need to be sent very often - this is not real time monitoring, an
 
 The `Send_message` block is a function that sends a message over the radio. This block takes two parameters - the `Type` of data to send, and the `value` to send.
 
-A variable is set with this data, along withe the device ID in the format `device_id:type:value`, for example for device 1 sending a temperature of 25°C, this would be `1:t:25.0`. This variable is then sent over the radio.
+A variable is set with this data, along with the device ID in the format `device_id:type:value`, for example for device 1 sending a temperature of 25°C, this would be `1:t:25.0`. This variable is then sent over the radio.
 
 ### Get message device ID
 
@@ -44,7 +46,7 @@ A variable is set with this data, along withe the device ID in the format `devic
 
 The mesh network works by listening for messages and forwarding them on. Not every message gets forwarded - to avoid the risk of messages bouncing back and forth, messages from a device for a particular value type are checked to see if they have been received recently, and if so they are not forwarded. The device that sent the messages is also checked - a message could go from device 1 to device 2, then back to 1. Messages that came from a particular device will never need to be sent on by the same device.
 
-The `Get_message_device_id` function block takes a `message` and extracts the device ID part. Messages are in the format `device_id:type:value`, so can be split by the `:` character into an array of three parts - the device ID, the data type, and the value. After splitting, the first item in the array (the value as position 0 as arrays start at 0) is the device ID, so this is returned.
+The `Get_message_device_id` function block takes a `message` and extracts the device ID part. Messages are in the format `device_id:type:value`, so can be split by the `:` character into an array of three parts - the device ID, the data type, and the value. After splitting, the first item in the array (the value at position 0 as arrays start at 0) is the device ID, so this is returned.
 
 For example, the message `1:t:25.0` gets split into an array of three values - `1`, `t`, `25.0`. The first value, `1`, is the device ID.
 
@@ -52,7 +54,7 @@ For example, the message `1:t:25.0` gets split into an array of three values - `
 
 ![The get message value type function block](../images/microbit-code-device-get-message-value-type.png)
 
-As described above, messages for a particular device ID and value type should not be forwarded on if they were received recently to stop messages bouncing back and forth. The `Get_message_value_type` function block gets the value type of a message in the same was as the `Get_message_device_id` function block. The second item in the array when splitting the message by `:` is the value type.
+As described above, messages for a particular device ID and value type should not be forwarded on if they were received recently to stop messages bouncing back and forth. The `Get_message_value_type` function block gets the value type of a message in the same was as the `Get_message_device_id` function block. The second item in the array (at postition 1 as array positions start at 0) when splitting the message by `:` is the value type.
 
 For example, the message `1:t:25.0` gets split into an array of three values - `1`, `t`, `25.0`. The second value, `t`, is the value type.
 
@@ -60,7 +62,7 @@ For example, the message `1:t:25.0` gets split into an array of three values - `
 
 ![The radio received block](../images/microbit-code-device-on-radio-received.png)
 
-The `on radio received` block is run by the micro:bit every time it receives a message over the radio from a device on the same group Id. This block then needs to forward the message on over the mesh, but needs to ensure that the mesh isn't flooded by the same message bouncing back and forth.
+The `on radio received` block is run by the micro:bit every time it receives a message over the radio from a device on the same radio group. This block then needs to forward the message on over the mesh, but needs to ensure that the mesh isn't flooded by the same message bouncing back and forth.
 
 Imagine the scenario of two micro:bits - 1 and 2. 1 sends a message with temperature data, 2 receives it and re-sends it, where it is picked up again by 1 and re-sent, received again by 2 and re-sent, and so on forever. This situation needs to be avoided, so this function needs to only send on messages once, not repeatedly.
 
