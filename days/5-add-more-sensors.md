@@ -6,7 +6,7 @@
 
 Yesterday you built the smart garden ornaments and set them up around your house. Today's project is to add more sensors to capture more data.
 
-So far you've used the temperature sensor built into the micro:bit. But this is not the limit - there are so many more sensors you can use to gather data! Todays part will cover three sensors - one on board and two external. You will learn how to add a new sensor and start gathering data
+So far you've used the temperature sensor built into the micro:bit. But this is not the limit - there are so many more sensors you can use to gather data! Todays part will cover two sensors - one on board and one external. You will learn how to add a new sensor and start gathering data
 
 The steps you'll take to do this are:
 
@@ -162,6 +162,116 @@ The dashboard in IoT Central show the device locations and temperature values. T
 
 ## Soil moisture
 
-## Noise
+A great way to monitor plants is using a soil moisture sensor - if the soil is too dry then your plant needs watering. These sensors range from the expensive that you would use in professional digital agriculture, to home made using nothing more than two bits of metal. This guide will show you how to make your own.
+
+To make this sensor, you will need the following:
+
+* 2 pieces of metal, such as long nails
+* A spall piece of wood, plastic or other non-conductive material that can keep the nails about 2cm apart
+* Gaffer tape
+* 2 jumper leads with crocodile clips
+* Appropriate waterproofing, such as a recyclable plastic bag
+
+### Make a sensor
+
+Soil moisture sensors measure the amount of water in soil by measuring how much current can be carried through the soil between two conductive probes in the soil. Essentially a voltage is applied to one probe, and the voltage at another probe a couple of centimeters away is measured. The wetter the soil, the more electricity can flow and the higher the voltage that is read from the second probe.
+
+These probes don't need to be anything particular, they just need to be able to carry a voltage. This means you can use any metal objects, such as a nails.
+
+These sensors don't measure a value at a known level - this isn't like a temperature sensor that can measure temperature in celsius and you would get consistent values between sensors. Instead these are more something you would self-calibrate, as in use your knowledge of the soil to see if it is too dry, and correlate that back to the measurement.
+
+For example, if you have these readings when the soil is too dry, ok, and wet:
+
+| Soil moisture | Reading |
+| ------------- | ------- |
+| Wet           | 800     |
+| Just right    | 600     |
+| Too dry       | 400     |
+
+Then you know if your soil moisture measurement is less than say 500, you should water your plant. The type of soil, how deep the probes are in the soil, and the material the probes are made out off all affect the reading. Essentially though, if you want to get reasonably consistent data across your neighborhood, make sure all your moisture sensors are the same.
+
+To make mine, I used two 15cm nails.
+
+![Two nails](../images/soil-moisture-sensor-nails.png).
+
+1. These nails need to be a consistent distance apart, about 2cm. To do this, fix the nails either side of a 2cm piece of wood, plastic or other non-conducting material. 2 lego bricks do nicely.
+
+    ![Two nails separated by 2 lego bricks](../images/soil-moisture-sensor-nails-lego.png)
+
+1. Tape these nails in place with gaffer tape. Leave enough room at the top of the nails to attach wires.
+
+    ![The nails taped together](../images/soil-moisture-sensor-nails-lego-gaffer-tape.png)
+
+1. Both nails need to be attached to wire, with the other end of the wire attached to pins on the micro:bit. Wires that end in crocodile clips are the best for this as you can attach them to both the nails and the micro:bit.
+
+    ![Crocodile clips attached to the nails](../images/soil-moisture-sensor-nails-crocodile-clips.png)
+
+1. Finally, attached the other end of the crocodile clips to the micro:bit. Fix one to the **3V** pin, and the other to pin **0**.
+
+    ![Crocodile clips attached to the micro bit](../images/soil-moisture-sensor-microbit-connection.png)
+
+### Program the micro:bit
+
+The pins on a micro:bit can measure an analog signal, on a scale of 0-1023. This signal comes from anything that provides power, such as a connection to the 3V power supply via nails and moist soil.
+
+> This reading is not a 'moisture' level, it is a measure of how much of the 3V makes it from one nail to another, which can give an indication of soil moisture.
+
+The 3V pin always provides power, so to get a moisture reading, the micro:bit needs to take an analog reading at pin 0.
+
+1. Open the smart garden ornament project in MakeCode
+
+1. Drag a **Call Send_message** block from the *Functions* toolbox item to the **forever** block
+
+    ![Adding the call send message block](../images/soil-moisture-makecode-add-call-to-forever.png)
+
+1. Change the first parameter to `sm`
+
+1. For the second parameter, expand the *Advanced* toolbox item, and select *Pins*
+
+1. Drag a **analog read pin** block to the second parameter
+
+    ![The forever block with the send message for the analog value](../images/soil-moisture-makecode-final-forever.png)
+
+1. Ensure the device ID is correct, and deploy the code to your micro:bit
+
+### Position the sensor
+
+The sensor needs to be positioned in soil, with as much of the nail in the soil as possible, up to where they are joined.
+
+With the positioning, you also need to consider moisture levels and if the micro:bit could get wet. If necessary, wrap the crocodile clips, micro:bit and battery pack in a plastic bag.
+
+Choose an ornament that is ground based as well, such as a gnome. If you want to use something that is higher up, such as a bird box, use longer wires to connect to the sensor.
+
+![The soil monitor in a plant](../images/soil-moisture-sensor-in-plant.png)
+
+### Program the Pi
+
+The `mappings.py` file needs to have a mapping added for the new `sm` value.
+
+1. Open the `mappings.py` file on the Pi
+
+1. Add an entry to the dictionary to map `sm` to `SoilMoisture`. Note there isn't a space, `SoilMoisture` is all one word.
+
+    ```python
+    value_types = {
+        "t" : "Temperature",
+        "sm" : "SoilMoisture",
+    }
+    ```
+
+1. Reboot the Pi to restart the Hub with the new mapping
+
+### Show the data in IoT Central
+
+To add the sensor data, repeat the steps above to add a new data type into a new version of the IoT Central device template, and the dashboard.
+
+1. Set the *Display name* to `Soil Moisture`
+
+1. Set the *Name* to `SoilMoisture`
+
+1. Leave the *Semantic type* as `None` and the *Schema* as `Double`
+
+![The new soil moisture interface entry](../images/soil-moisture-iot-central-new-telemetry-type.png)
 
 ## Summary
+
