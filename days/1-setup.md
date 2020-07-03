@@ -8,7 +8,7 @@ Todays project is to set up the cloud service. This service will take data from 
 
 The cloud service that will be used is [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn), an IoT software-as-a-service platform. IoT Central allows you to configure apps - separate projects that can have one or more devices sending in data, as well as dashboard that you can use to see that data. In this case, the IoT Central app will be a project for your smart garden ornaments, connecting to your micro:bits to gather sensor data and plotting this data on a dashboard.
 
-<!-- TODO - add dashboard screenshot -->
+![The project dashboard showing temperature, light, soil and location data](../images/project-dashboard.png)
 
 The steps you'll take to set this up are:
 

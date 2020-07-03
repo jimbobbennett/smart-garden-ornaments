@@ -263,7 +263,7 @@ The `mappings.py` file needs to have a mapping added for the new `sm` value.
 
 ### Show the data in IoT Central
 
-To add the sensor data, repeat the steps above to add a new data type into a new version of the IoT Central device template, and the dashboard.
+To add the sensor data, repeat the steps above to add a new data type into a new version of the IoT Central device template.
 
 1. Set the *Display name* to `Soil Moisture`
 
@@ -272,6 +272,10 @@ To add the sensor data, repeat the steps above to add a new data type into a new
 1. Leave the *Semantic type* as `None` and the *Schema* as `Double`
 
 ![The new soil moisture interface entry](../images/soil-moisture-iot-central-new-telemetry-type.png)
+
+Once the interface has the `Soil Moisture` item and is published, update the dashboard to show the soil moisture level.
+
+![The soiul moisture level chart](../images/iot-central-soil-moisture-dashboard.png)
 
 ## Summary
 
