@@ -275,3 +275,6 @@ To add the sensor data, repeat the steps above to add a new data type into a new
 
 ## Summary
 
+Today is the last day of hands on workshops, but not the last day of this project! Keep on going, collecting data, making more smart garden ornaments and adding more sensors!
+
+Please share what you have done with the world. If you have added a new sensor, please raise a PR to add it here. Add your setup and stories to the [stories](./stories) folder. We'd love to hear what smart ornaments you have created, how large your mesh is, what fun things you've found out.
