@@ -64,8 +64,6 @@ Another option is to put the Hub with a line of sight to the position of the fir
 
 Internet should be less of a problem if you are using WiFi - the Hub should be positioned somewhere where it can get a good WiFi signal. If you are using wired internet then you need to ensure the Hub is close enough to your router to run a cable.
 
-<!-- TODO - pictures -->
-
 ### Position the ornament
 
 Once the Hub is positioned, you can position the first smart garden ornament. Pick a location that can gather good temperature data - for example if you care about the temperature in the shade, make sure it is positioned in the shade.
@@ -78,15 +76,13 @@ You also need easy access to be able to change batteries! A micro:bit with a goo
 
 For example, you could have the Hub next to a window inside the house with line of sight to a tree, and a smart bird box in the tree.
 
-<!-- TODO - pictures -->
+![The microbit with a birdbox in a tree in the distance](../images/smart-garden-ornament-hub-birdbox-in-tree.png)
 
 > If the ideal position is not close enough to the Hub, you can always add another micro:bit to the mesh. Put it in a plastic bag to make it waterproof and position between your Hub and smart garden ornament.
 
 ## Position the rest of the ornaments
 
 Once one smart garden ornament is in place, you can position the rest. Make sure they are close enough to at least one other smart garden ornament to ensure the messages get on to the mesh. For example, if you have a bird box in a tree on one side of the road, you can add another on the other side of the road.
-
-<!-- TODO - pictures -->
 
 > If the ideal position is not close enough to the Hub, you can always add another micro:bit to the mesh. Put it in a plastic bag to make it waterproof and position between your Hub and smart garden ornament.
 

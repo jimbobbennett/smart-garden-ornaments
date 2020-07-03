@@ -6,7 +6,7 @@
 
 Yesterday you set up the cloud service to gather and show data from smart garden ornaments. Todays project is to set up the Raspberry Pi-based central hub that will send data to the cloud.
 
-<!-- TODO - photo -->
+![](../images/smart-garden-ornament-hub.png)
 
 This hub listens to messages that will be received via the radio on a micro:bit. These messages are then passed along a serial connection over USB to the Raspberry Pi, which will then send the messages to IoT Central.
 

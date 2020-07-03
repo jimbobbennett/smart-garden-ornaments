@@ -8,7 +8,7 @@ Yesterday you set up the Pi and micro:bit based connection hub that can route me
 
 Each micro:bit as an on-board temperature sensor, and you can use this to get the current temperature wherever the micro:bit is positioned. This will then be sent to IoT Central via the hub, by sending a radio message.
 
-<!-- TODO - picture -->
+![A message going to the hub from a micro bit](../images/project-message-flow-single-microbit.png)
 
 The steps you'll take to do this are:
 
@@ -373,7 +373,7 @@ A way to work around this is a mesh network. Mesh networks by having multiple de
 
 For example, if you had 2 micro:bits numbered 1 and 2, with 1 too far from the Hub to send a message, but 2 is half way between 1 and the Hub, and close enough to both to send a receive messages. If 2 sends a message, the Hub can receive it. If 1 sends a message, the Hub can't receive it, but 2 can - so 2 receives the message and re-sends it to the Hub. That way the message jumps from 1 to 2 to the Hub.
 
-<!-- TODO - picture -->
+![The message flow](../images/project-message-flow.png)
 
 To build this in the micro:bits involves adding blocks to receive radio messages, the same as the Hub micro:bit does, but instead of sending them to the serial connection, re-send the exact same message
 
@@ -381,13 +381,9 @@ There are a number of problems that need to be overcome.
 
 The first is ensuring messages don't constantly bounce around - having 1 send a message, 2 receives it and sends it, 1 then receives it from 2 and re-sends it, 2 receives it and re-sends it and so on for ever. The way round this is to check the device code, and if the code matches the device, don't resend. For example, if 2 re-sends a message from 1, and 1 receives this it can see that the message originally came from itself, so doesn't need to resend.
 
-<!-- TODO - picture -->
-
 The second problem is when you have more than 2 devices - if 1 sends a message it could bounce between 2 and 3 forever. This can be avoided because we know how often messages are sent - every 10 minutes. When a device gets a message from a device it can track the time it was received. If it gets the same message within 9 minutes ( to allow time for message delays) then it can be ignored. For example, 1 sends a message at 9AM. 2 receives it and stores it got a message from 1 at 9AM. If it receives a message from 1 again that was re-sent by 3 at 9:01AM, it will see that the time difference is less than 9 minutes and not resend.
 
 micro:bits can't actually keep track of the real time, but they do track how many seconds since they last restarted, so this time can be used to determine the time since the last message.
-
-<!-- TODO - picture -->
 
 ## Code the micro:bit mesh network
 
@@ -444,8 +440,6 @@ You can download the code using the same instructions as before - changing the d
 ### Test the mesh network
 
 To test the mesh network, you will need power for the micro:bits, as well as some space to test them out. You will also need an assistant to make it easier!
-
-<!-- TODO - add pictures -->
 
 1. Make sure the Hub is running and the Hub micro:bit is connected and the heartbeat is visible on the LEDs
 

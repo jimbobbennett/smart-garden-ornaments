@@ -4,7 +4,7 @@
 
 *Ever wanted to track things happening in your garden and neighborhood using smart garden ornaments? Now you can using BBC micro:bits and a cloud-based IoT service.*
 
-<!-- TODO - add photo -->
+![A bird box in a tree with a micro bit visible inside](./images/smart-garden-ornament-birdbox.png)
 
 This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn).
 
@@ -12,7 +12,7 @@ This is a fun week long project for those who want to take their first steps int
 
 Each smart garden ornament is based around a [BBC micro:bit](https://microbit.org), programmed using [Microsoft MakeCode](https://microbit.org/code/). These micro:bits sit inside whatever ornament you have, such as a bird box or garden gnome, and gather data about the outside world - also know as telemetry. This data can come from the built-in temperature sensor, or external sensors such as microphones, proximity senors or soil moisture sensors. These micro:bits will then send this data to other micro:bits via the built-in radio. Each micro:bit will forward on the message just like passing notes in class until it reaches a 'hub' micro:bit connected to a Raspberry Pi. This will then send the message on to the cloud to plot on a chart.
 
-<!-- TODO - add photo -->
+![The hub](./images/smart-garden-ornament-hub.png)
 
 This project is not limited to one household - if you have neighbors they can also have smart garden ornaments as long as they are positioned close enough for the micro:bits to talk to each other. If you want to share data between households that are further apart, you can do this by using multiple hubs all connected to the same cloud service.
 
@@ -39,30 +39,43 @@ To learn mode about coding a micro:bit with Microsoft MakeCode, check out all th
 For the 'hub' that allows your micro:bits to connect to the cloud, you'll need the following:
 
 * A Raspberry Pi running Raspberry Pi OS or Raspberry Pi OS Lite. Any Pi will do that has internet connectivity, even the Pi Zero W (but not the base Pi Zero without WiFi).
+
 * An SD card for the Pi, at least 8GB in size
+
 * A BBC micro:bit
+
 * An appropriate USB cable to connect the micro:bit to the Pi. For example if you are using a Pi 3 or 4 you'll need a USB to micro USB cable, if you are using a Pi Zero you'll need a micro USB to micro USB cable or an adapter.
+
 * A USB power supply for the Pi. For the Pi 4 this needs to be USB-C, for other Pis this needs to be micro USB.
-* An Azure subscription. Instructions will be provided on how to set this up, and you'll either need to be a student over the age of 18 in higher education to sign up for a student account, or have access to a credit card to sign up for a free account.
 
-  > If you sign up for a free account, your credit card will **NOT** be charged, it is just needed for verification.
+* An Azure subscription. Instructions will be provided on how to set this up in the first days project, and you'll either need to be a student over the age of 18 in higher education to sign up for a student account, or have access to a credit card to sign up for a free account.
 
-<!-- TODO - add photo -->
+    > If you sign up for a free account, your credit card will **NOT** be charged, it is just needed for verification.
+
+![The hub components](./images/hub-components.png)
 
 ### Smart garden ornaments
 
 For each smart garden ornament you'll need the following:
 
 * A BBC micro:bit
+
 * A battery pack for the micro:bit, along with batteries. To keep the micro:bits running as long as possible, use a 2xAA battery pack, with AA alkaline batteries. Rechargeable batteries are not recommended as they provide a lower voltage. You can read more recommendations on powering the micro:bit in the [micro:bit support docs](https://support.microbit.org/support/solutions/articles/19000013982-connecting-a-power-supply-to-the-micro-bit).
+
+    > Although you can use AAA batteries, they don't last anywhere near as long, so to gather data over longer periods to time use AA batteries. You should be able to gather data for about a week on one pair of batteries
+
 * A garden ornament that can house the micro:bit and keep it dry in the event of rain. This could be a bird box, a garden gnome, fairy house, anything that is outdoor safe and has space to put the micro:bit and battery pack inside.
+
 * Blank stickers to put labels on the micro:bits
 
-<!-- TODO - add photo -->
+* A USB cable that can connect to your computer to program the micro:bit
+
+![The hub components](./images/smart-ornament-components.png)
 
 The micro:bits have a temperature sensor built in, so if you are just tracking temperature this is all you'll need. If you want to track other things then you'll need different sensors. Some need to be purchased as a sensor (such as a microphone to track noise levels or a proximity sensor), others such as a soil moisture sensor can be made yourself. This project will cover the following sensors:
 
-<!-- TODO - add sensors -->
+* Temperature sensor
+* Light sensor
 * Home made soil moisture sensor
 
 ## Cost
@@ -75,7 +88,7 @@ The cloud service used may come with a small cost. It is free for the first 2 de
 
 If you just want to get everything up and running, you can skip this part and dive into the setup.
 
-<!-- TODO add picture of message flow -->
+![The flow of messages in the project](./images/project-message-flow.png)
 
 The basic architecture is:
 

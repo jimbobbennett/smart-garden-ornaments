@@ -93,8 +93,6 @@ Telemetry, properties and cloud properties can have a type such as temperature, 
 
 There is a small complexity to device templates - namely versioning. IoT Central is great for hobbyists and makers as it is less complex than setting up an IoT solution using many different pieces, but it is still capable of supporting professional use. To support professional users building production applications, device templates come with *capability models* that contain an interface that defines the telemetry, properties and commands that a device supports. These interfaces are versioned, meaning that you can't delete items from the interface, only add by creating a new version. That way you can't break an existing device template - imagine changing the name of a property after you've deployed a million devices sending data with the old name!
 
-<!-- TODO - add diagram explaining this -->
-
 To start with, the device template will have an interface to collect the temperature, and in later days you'll version this interface to add more telemetry values.
 
 #### Create the empty device template
