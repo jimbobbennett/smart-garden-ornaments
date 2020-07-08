@@ -14,7 +14,7 @@ Each smart garden ornament is based around a [BBC micro:bit](https://microbit.or
 
 ![The hub](./images/smart-garden-ornament-hub.png)
 
-This project is not limited to one household - if you have neighbors they can also have smart garden ornaments as long as they are positioned close enough for the micro:bits to talk to each other. If you want to share data between households that are further apart, you can do this by using multiple hubs all connected to the same cloud service.
+This project is not limited to one household - if you have neighbors they can also have smart garden ornaments as long as they are positioned close enough for the micro:bits to talk to each other. If you want to share data between households that are further apart, you can do this by using multiple hubs all connected to the same cloud service. It's also perfect to set up in a school, tracking data in classrooms or the playground.
 
 ## What you'll need
 
