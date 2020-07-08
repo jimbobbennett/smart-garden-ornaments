@@ -1,6 +1,6 @@
 # Smart Garden Ornaments
 
-*Ever wanted to track things happening in your garden and neighborhood using smart garden ornaments? Now you can using BBC micro:bits and a cloud-based IoT service.*
+*Ever wanted to track things happening in your garden, neighborhood or school using smart garden ornaments? Now you can using BBC micro:bits and a cloud-based IoT service.*
 
 ![A bird box in a tree with a micro bit visible inside](./images/smart-garden-ornament-birdbox.png)
 
