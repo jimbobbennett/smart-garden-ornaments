@@ -6,6 +6,8 @@
 
 This is a fun week long project for those who want to take their first steps into the world of the Internet of Things (IoT) using devices that are popular with kids, and tools that make programming accessible to young developers. You'll use a Raspberry Pi along with some [BBC micro:bits](https://microbit.org) and any garden ornaments you have to hand to build a smart neighborhood, gathering data such as temperature and noise levels and displaying it in the cloud using [Azure IoT Central](https://azure.microsoft.com/services/iot-central/?WT.mc_id=julyot-github-jabenn).
 
+This is great for families, groups of friends, or even in the classroom - gathering data around your school.
+
 ## How it works
 
 Each smart garden ornament is based around a [BBC micro:bit](https://microbit.org), programmed using [Microsoft MakeCode](https://microbit.org/code/). These micro:bits sit inside whatever ornament you have, such as a bird box or garden gnome, and gather data about the outside world - also know as telemetry. This data can come from the built-in temperature sensor, or external sensors such as microphones, proximity senors or soil moisture sensors. These micro:bits will then send this data to other micro:bits via the built-in radio. Each micro:bit will forward on the message just like passing notes in class until it reaches a 'hub' micro:bit connected to a Raspberry Pi. This will then send the message on to the cloud to plot on a chart.
