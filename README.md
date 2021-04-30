@@ -1,5 +1,8 @@
 # Smart Garden Ornaments
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
+[![Twitter: jimbobbennett](https://img.shields.io/twitter/follow/jimbobbennett.svg?style=social)](https://twitter.com/jimbobbennett)
+
 *Ever wanted to track things happening in your garden, neighborhood or school using smart garden ornaments? Now you can using BBC micro:bits and a cloud-based IoT service.*
 
 ![A bird box in a tree with a micro bit visible inside](./images/smart-garden-ornament-birdbox.png)
